@@ -7,11 +7,18 @@
 </head>
 <body>
     <h1>部屋をコーディネート（仮）</h1>
-    <form action="second_page.html" method="POST">
+    <form id="roomForm" action="second_page.html" method="POST">
         <label for="roomSize">部屋の広さ（畳数）を入力してください:</label>
-          <input type="number" id="roomSize" name="roomSize" required min="1" placeholder="例: 6" />
+        <input type="number" id="roomSize" name="roomSize" required min="1" placeholder="例: 6" />
         <button type="submit">送信</button>
     </form>
+
+    <script>
+        document.getElementById('roomForm').addEventListener('submit', function(e) {
+            const roomSize = document.getElementById('roomSize').value;
+            localStorage.setItem('roomSize', roomSize); // ローカルストレージに保存
+        });
+    </script>
 </body>
 </html>
 
