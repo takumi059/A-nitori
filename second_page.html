@@ -28,7 +28,14 @@
         </div>
         <button type="submit">次へ</button>
     </form>
-
+ <script>
+        document.getElementById('imageForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const selectedImage = document.querySelector('input[name="selectedImage"]:checked').value;
+            localStorage.setItem('selectedImage', selectedImage); // ローカルストレージに保存
+            window.location.href = 'last_page.html'; // 次のページに遷移
+        });
+    </script>
    
 </body>
 </html>
