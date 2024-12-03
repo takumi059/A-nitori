@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -8,9 +7,18 @@
 </head>
 <body>
     <h1>結果</h1>
-    <p>これがおすすめです！（仮） </p>
-    <img src="<?php echo $selectedImage; ?>" alt="コーディネート後の部屋" style="width:300px; height:auto;">
+    <p>選択した画像:</p>
+    <img id="selectedImage" src="" alt="選択された画像" style="width:300px; height:auto;">
 
-    <a href="" style="display: inline-block; padding: 10px 20px; background-color: #007BFF; color: #fff; text-decoration: none; border-radius: 5px;">最初のページに戻る</a>
+    <a href="index.html">最初のページに戻る</a>
+
+    <script>
+        const selectedImage = localStorage.getItem('selectedImage');
+        if (selectedImage) {
+            document.getElementById('selectedImage').src = selectedImage;
+        } else {
+            document.body.innerHTML = '<p>画像が選択されていません。</p>';
+        }
+    </script>
 </body>
 </html>
