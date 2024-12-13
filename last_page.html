@@ -55,7 +55,7 @@ $conn->close();
                 // 日本語をURLエンコード（もし商品名に日本語が含まれている場合）
                 $encodedItemName = urlencode($safeItemName);
                 ?>
-                <option value="<?php echo $item['id']; ?>" data-image="furniture/<?php echo $encodedItemName; ?>.jpg" data-url="<?php echo htmlspecialchars($item['URL']); ?>">
+                <option value="<?php echo $item['id']; ?>" data-image="furniture/シェル型-白<?php echo $encodedItemName; ?>.jpg" data-url="<?php echo htmlspecialchars($item['URL']); ?>">
                     <?php echo htmlspecialchars($item['商品名']); ?>（<?php echo htmlspecialchars($item['色']); ?>）
                 </option>
             <?php endforeach; ?>
