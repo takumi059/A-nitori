@@ -3,15 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>部屋のコーディネート</title>
+    <title>ニトリ風テンプレート</title>
+    <style>
+        /* 全体のスタイル */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8; /* 背景はホワイト系 */
+            color: #333;
+        }
+
+        /* ヘッダー */
+        header {
+            background-color: #009879; /* ニトリ風のグリーン */
+            color: #fff;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* メインコンテンツ */
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .hero {
+            background-color: #d9f1ee; /* 淡いグリーン */
+            padding: 50px 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .hero h2 {
+            margin: 0;
+            font-size: 32px;
+            color: #005f50; /* 濃いグリーン */
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #009879;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        .cta-button:hover {
+            background-color: #007960; /* 少し濃いグリーン */
+        }
+
+        /* フッター */
+        footer {
+            background-color: #004c4c; /* ニトリ風のブルーグリーン */
+            color: #fff;
+            text-align: center;
+            padding: 15px 20px;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
-    <h1>部屋をコーディネート（仮）</h1>
-    <form id="roomForm" action="second_page.html" method="GET">
-        <label for="roomSize">部屋の広さ（畳数）を入力してください:</label>
-        <input type="number" id="roomSize" name="roomSize" required min="1" placeholder="例: 6" />
-        <button type="submit">送信</button>
-    </form>
+    <header>
+        <h1>ニトリ風ホームページ</h1>
+        <nav>
+            <ul>
+                <li><a href="#">ホーム</a></li>
+                <li><a href="#">商品一覧</a></li>
+                <li><a href="#">店舗情報</a></li>
+                <li><a href="#">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="hero">
+            <h2>お部屋をもっと素敵に</h2>
+            <p>ニトリのインテリアで心地よい暮らしを。</p>
+            <a href="#" class="cta-button">詳しくはこちら</a>
+        </div>
+        <section>
+            <h3>おすすめ商品</h3>
+            <p>季節に合わせた最新のインテリアをチェック！</p>
+        </section>
+        <!-- 2度目の部屋サイズ入力フォーム -->
+        <section>
+            <h3>部屋をコーディネート（仮）</h3>
+            <form id="roomForm" action="second_page.html" method="GET">
+                <label for="roomSize">部屋の広さ（畳数）を入力してください:</label>
+                <input type="number" id="roomSize" name="roomSize" required min="1" placeholder="例: 6" />
+                <button type="submit">送信</button>
+            </form>
+		<button type="submit">画像をアップロード</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Nitori. All Rights Reserved.</p>
+    </footer>
 
     <script>
         document.getElementById('roomForm').addEventListener('submit', function(e) {
@@ -21,5 +151,6 @@
     </script>
 </body>
 </html>
+
 
 
